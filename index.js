@@ -6,7 +6,7 @@ function failPromise () {
   if (typeof Promise !== 'undefined') {
     const p = new Promise(function (resolve, reject) {
       setTimeout(function () {
-        reject(new Error('this is a rejected promise'))
+        reject(new Error('This is a rejected promise test (crasher)'))
       }, 1000)
     })
     // p has no .catch handler!
