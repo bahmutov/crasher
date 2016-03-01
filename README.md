@@ -29,8 +29,11 @@ I use [Sentry](https://glebbahmutov.com/blog/tags/sentry/) a lot to capture both
 In order to test the error reporting, it is nice to reliably generate crashes, both synchronous
 and asynchronous.
 
-See related project [crash-reporter-middleware](https://github.com/bahmutov/crash-reporter-middleware)
-for sendig crashes to the crash reporting service.
+## Related projects
+
+* [crash-reporter-middleware](https://github.com/bahmutov/crash-reporter-middleware)
+  sends crashes to the crash reporting service
+* [raven-express](https://github.com/bahmutov/raven-express) is a Sentry client for Node Express server
 
 ### Small print
 
