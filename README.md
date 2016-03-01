@@ -23,7 +23,14 @@ Test that both sync and async thrown errors are captured by the crash reporting 
 
     curl http://localhost/api/crash
 
+## Why
+
 I use [Sentry](https://glebbahmutov.com/blog/tags/sentry/) a lot to capture both server and client-side crashes.
+In order to test the error reporting, it is nice to reliably generate crashes, both synchronous
+and asynchronous.
+
+See related project [crash-reporter-middleware](https://github.com/bahmutov/crash-reporter-middleware)
+for sendig crashes to the crash reporting service.
 
 ### Small print
 
