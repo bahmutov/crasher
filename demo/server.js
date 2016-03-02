@@ -22,5 +22,5 @@ app.get('/crash-promise', function (req, res) {
 })
 app.get('/crash', require('crasher'))
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('Express app listening on port 3000!')
 })

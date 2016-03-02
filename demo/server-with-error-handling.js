@@ -1,4 +1,4 @@
-// server that just throws errors, without handling them
+// server that handles errors
 const express = require('express')
 const app = express()
 app.get('/crash-sync', function (req, res) {
@@ -34,5 +34,5 @@ process.on('unhandledRejection', function (reason, promise) {
   console.error('unhandled promise rejection:', reason.message || reason)
 })
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('Express app listening on port 3000!')
 })

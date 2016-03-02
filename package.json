@@ -12,7 +12,8 @@
     "issues": "git-issues",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "demo": "NODE_PATH=.. node demo/server.js",
-    "demo-with-handling": "NODE_PATH=.. node demo/server-with-error-handling.js"
+    "demo-with-handling": "NODE_PATH=.. node demo/server-with-error-handling.js",
+    "demo-koa": "NODE_PATH=.. node demo/server-koa.js"
   },
   "files": [
     "index.js"
@@ -41,6 +42,8 @@
     "express": "4.13.4",
     "git-issues": "1.2.0",
     "i": "0.3.4",
+    "koa": "1.1.2",
+    "koa-route": "2.4.2",
     "pre-git": "3.4.0",
     "semantic-release": "^4.3.5",
     "standard": "6.0.7"
