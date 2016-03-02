@@ -28,6 +28,15 @@ Test that both sync and async thrown errors are captured by the crash reporting 
 The code throws 3 types of errors: sync error, async error (via `setTimeout`) and an unhandled
 rejected promise.
 
+## Demo
+
+You can spin a small demo server and cause the crashes
+
+    npm run demo
+    // starts the service
+    // from another terminal
+    curl localhost:3000/crash
+
 ## Why
 
 I use [Sentry](https://glebbahmutov.com/blog/tags/sentry/) a lot to capture both server and client-side crashes.
