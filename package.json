@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/bahmutov/crasher",
   "devDependencies": {
+    "express": "4.13.4",
     "git-issues": "1.2.0",
     "i": "0.3.4",
     "pre-git": "3.4.0",
@@ -48,7 +49,9 @@
       "pre-commit": [
         "npm test"
       ],
-      "pre-push": ["npm run size"],
+      "pre-push": [
+        "npm run size"
+      ],
       "post-commit": [],
       "post-merge": []
     }
