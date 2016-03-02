@@ -2,12 +2,24 @@ const koa = require('koa')
 const route = require('koa-route')
 const app = koa()
 
-app.use(route.get('/crash-sync', function * () {
+function * syncError() {
   console.log('sync crashing')
   throw new Error('Sync error')
   // this code is unreachable
   this.body = 'We will crash sync\n' // eslint-disable-line no-unreachable
+}
+
+app.use(route.get('/crash-sync', syncError))
+app.use(route.get('/crash-handle-sync', function * () {
+  try {
+    yield syncError()
+  } catch (err) {
+    console.log('Sync error happened, and we caught it')
+    this.body = 'Sync error handled'
+    this.app.emit('error', err, this)
+  }
 }))
+
 app.use(route.get('/crash-async', function * () {
   console.log('async crashing')
   setTimeout(function () {
