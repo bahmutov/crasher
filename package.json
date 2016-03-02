@@ -8,8 +8,13 @@
     "test": "echo Write tests!",
     "lint": "standard --verbose index.js",
     "commit": "commit-wizard",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "issues": "git-issues",
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
   },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bahmutov/crasher.git"
@@ -31,10 +36,11 @@
   },
   "homepage": "https://github.com/bahmutov/crasher",
   "devDependencies": {
+    "git-issues": "1.2.0",
     "i": "0.3.4",
     "pre-git": "3.4.0",
-    "standard": "6.0.7",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^4.3.5",
+    "standard": "6.0.7"
   },
   "config": {
     "pre-git": {
@@ -42,7 +48,7 @@
       "pre-commit": [
         "npm test"
       ],
-      "pre-push": [],
+      "pre-push": ["npm run size"],
       "post-commit": [],
       "post-merge": []
     }
