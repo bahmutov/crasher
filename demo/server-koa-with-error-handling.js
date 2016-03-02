@@ -2,7 +2,7 @@ const koa = require('koa')
 const route = require('koa-route')
 const app = koa()
 
-function * syncError() {
+function * syncError () {
   console.log('sync crashing')
   throw new Error('Sync error')
   // this code is unreachable
@@ -33,6 +33,8 @@ app.use(route.get('/crash-promise', function * () {
   Promise.reject(42)
   this.body = 'rejected a promise\n'
 }))
+
+app.use(route.get('/crash', require('crasher')))
 
 app.on('error', function (err, ctx) {
   console.error('Koa app error', err.stack)

@@ -11,7 +11,7 @@
 
     npm install --save crasher
 
-Use as middleware
+Use as middleware in Express
 
 ```js
 // setup crash reporting, for example Sentry
@@ -22,6 +22,15 @@ app.get('/api/crash', require('crasher'));
 Test that both sync and async thrown errors are captured by the crash reporting setup
 
     curl http://localhost/api/crash
+
+Use as middleware in Koa
+
+```js
+const koa = require('koa')
+const route = require('koa-route')
+const app = koa()
+app.use(route.get('/crash', require('crasher')))
+```
 
 ## Exceptions
 
@@ -48,6 +57,13 @@ handle them
     This is a test error from middleware (crasher)
     global exception: This is a test async error (crasher)
     unhandled promise rejection: This is a rejected promise test (crasher)
+
+### Demos
+
+* [Express without error handling](demo/server.js)
+* [Express with error handling](demo/server-with-error-handling.js)
+* [Koa without error handling](demo/server-koa.js)
+* [Koa with error handling](demo/server-koa-with-error-handling.js)
 
 ## Why
 
