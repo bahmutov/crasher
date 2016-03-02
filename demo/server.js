@@ -6,6 +6,14 @@ app.get('/crash', function (req, res) {
   // this code is unreachable
   res.send('We will crash\n') // eslint-disable-line no-unreachable
 })
+app.get('/crash-async', function (req, res) {
+  console.log('async crashing')
+  setTimeout(function () {
+    throw new Error('Async error')
+  }, 100)
+  // this code runs fine
+  res.send('after async crash\n')
+})
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })
