@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "echo Write tests!",
-    "lint": "standard --verbose index.js",
+    "lint": "standard --verbose index.js demo/*.js",
     "commit": "commit-wizard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "issues": "git-issues",
