@@ -21,6 +21,16 @@ app.get('/crash-promise', function (req, res) {
   res.send('rejected a promise\n')
 })
 app.get('/crash', require('crasher'))
+
+app.use(function errorHandler (err, req, res, next) {
+  console.error(err.message)
+  res.status(500)
+  res.send('error ' + err.message + '\n')
+})
+process.on('uncaughtException', function (err) {
+  console.error('global exception:', err.message)
+})
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })
