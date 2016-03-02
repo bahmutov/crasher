@@ -7,6 +7,8 @@
 [![Build status][crasher-ci-image] ][crasher-ci-url]
 [![semantic-release][semantic-image] ][semantic-url]
 
+Read [How to crash](https://glebbahmutov.com/blog/how-to-crash/) blog post
+
 ## Install and use
 
     npm install --save crasher
