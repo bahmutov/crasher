@@ -30,7 +30,9 @@ app.use(function errorHandler (err, req, res, next) {
 process.on('uncaughtException', function (err) {
   console.error('global exception:', err.message)
 })
-
+process.on('unhandledRejection', function (reason, promise) {
+  console.error('unhandled promise rejection:', reason.message || reason)
+})
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })

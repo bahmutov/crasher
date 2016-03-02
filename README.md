@@ -33,9 +33,21 @@ rejected promise.
 You can spin a small demo server and cause the crashes
 
     npm run demo
-    // starts the service
-    // from another terminal
+    # starts the service
+    # from another terminal
     curl localhost:3000/crash
+
+There is also an Express server demo that catches all types of crashes, showing how to
+handle them
+
+    npm run demo-with-handling
+    # starts the service
+    # from another terminal
+    curl localhost:3000/crash
+    # the server shows 3 messages
+    This is a test error from middleware (crasher)
+    global exception: This is a test async error (crasher)
+    unhandled promise rejection: This is a rejected promise test (crasher)
 
 ## Why
 
