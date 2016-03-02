@@ -13,7 +13,8 @@
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "demo": "NODE_PATH=.. node demo/server.js",
     "demo-with-handling": "NODE_PATH=.. node demo/server-with-error-handling.js",
-    "demo-koa": "NODE_PATH=.. node demo/server-koa.js"
+    "demo-koa": "NODE_PATH=.. node demo/server-koa.js",
+    "demo-koa-with-handling": "NODE_PATH=.. node demo/server-koa-with-error-handling.js"
   },
   "files": [
     "index.js"
