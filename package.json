@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha src/*-spec.js",
-    "lint": "standard --verbose src demo/*.js",
+    "lint": "standard --verbose '*.js' src demo/*.js",
     "commit": "commit-wizard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "issues": "git-issues",
@@ -14,9 +14,11 @@
     "demo": "NODE_PATH=.. node demo/server.js",
     "demo-with-handling": "NODE_PATH=.. node demo/server-with-error-handling.js",
     "demo-koa": "NODE_PATH=.. node demo/server-koa.js",
-    "demo-koa-with-handling": "NODE_PATH=.. node demo/server-koa-with-error-handling.js"
+    "demo-koa-with-handling": "NODE_PATH=.. node demo/server-koa-with-error-handling.js",
+    "demo-separate": "NODE_PATH=.. node demo/separate.js"
   },
   "files": [
+    "*.js",
     "src/*.js",
     "!src/*-spec.js"
   ],

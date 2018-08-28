@@ -1,5 +1,5 @@
 /* eslint-env Mocha */
-const syncCrash = require('./sync-crash')
+const syncCrash = require('../sync')
 const la = require('lazy-ass')
 const is = require('check-more-types')
 

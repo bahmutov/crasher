@@ -1,5 +1,5 @@
 /* eslint-env Mocha */
-const failPromise = require('./fail-promise')
+const failPromise = require('../promise')
 
 describe('fail-promise', () => {
   it('rejects with a promise', () => {

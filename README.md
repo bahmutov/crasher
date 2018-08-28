@@ -35,6 +35,14 @@ const app = koa()
 app.use(route.get('/crash', require('crasher')))
 ```
 
+You can also register separate callbacks for sync, async and rejected promise. See [demo/separate.js](demo/separate.js)
+
+```js
+app.get('/crash/sync', require('crasher/sync'))
+app.get('/crash/async', require('crasher/async'))
+app.get('/crash/promise', require('crasher/promise'))
+```
+
 ## Exceptions
 
 The code throws 3 types of errors: sync error, async error (via `setTimeout`) and an unhandled

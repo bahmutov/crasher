@@ -1,6 +1,6 @@
-const syncCrash = require('./sync-crash')
-const asyncCrash = require('./async-crash')
-const failPromise = require('./fail-promise')
+const syncCrash = require('../sync')
+const asyncCrash = require('../async')
+const failPromise = require('../promise')
 
 function crasher () {
   // see if async errors are handled globally
