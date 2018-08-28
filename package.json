@@ -41,11 +41,13 @@
   },
   "homepage": "https://github.com/bahmutov/crasher",
   "devDependencies": {
+    "check-more-types": "2.24.0",
     "express": "4.13.4",
     "git-issues": "1.2.0",
     "i": "0.3.4",
     "koa": "1.1.2",
     "koa-route": "2.4.2",
+    "lazy-ass": "1.6.0",
     "mocha": "5.2.0",
     "pre-git": "3.4.0",
     "semantic-release": "^4.3.5",
