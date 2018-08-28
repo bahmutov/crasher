@@ -1,12 +1,12 @@
 {
   "name": "crasher",
   "description": "Simple middleware for throwing sync and async errors for testing your crash reporting setup (like Sentry)",
-  "main": "index.js",
+  "main": "src",
   "version": "0.0.0-semantic-release",
   "scripts": {
     "pretest": "npm run lint",
     "test": "echo Write tests!",
-    "lint": "standard --verbose index.js demo/*.js",
+    "lint": "standard --verbose src demo/*.js",
     "commit": "commit-wizard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "issues": "git-issues",
@@ -17,7 +17,8 @@
     "demo-koa-with-handling": "NODE_PATH=.. node demo/server-koa-with-error-handling.js"
   },
   "files": [
-    "index.js"
+    "src/*.js",
+    "!src/*-spec.js"
   ],
   "repository": {
     "type": "git",
