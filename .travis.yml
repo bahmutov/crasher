@@ -4,13 +4,9 @@ cache:
   directories:
     - node_modules
 notifications:
-  email: false
+  email: true
 node_js:
-  - '4'
-before_install:
-  - npm i -g npm@^2.0.0
-before_script:
-  - npm prune
+  - '10'
 after_success:
   - npm run semantic-release
 branches:
