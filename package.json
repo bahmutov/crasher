@@ -2,20 +2,21 @@
   "name": "crasher",
   "description": "Simple middleware for throwing sync and async errors for testing your crash reporting setup (like Sentry)",
   "main": "src",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0-development",
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha src/*-spec.js",
     "lint": "standard --verbose '*.js' src demo/*.js",
     "commit": "commit-wizard",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "issues": "git-issues",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "demo": "NODE_PATH=.. node demo/server.js",
     "demo-with-handling": "NODE_PATH=.. node demo/server-with-error-handling.js",
     "demo-koa": "NODE_PATH=.. node demo/server-koa.js",
     "demo-koa-with-handling": "NODE_PATH=.. node demo/server-koa-with-error-handling.js",
-    "demo-separate": "NODE_PATH=.. node demo/separate.js"
+    "demo-separate": "NODE_PATH=.. node demo/separate.js",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "files": [
     "*.js",
@@ -51,8 +52,9 @@
     "lazy-ass": "1.6.0",
     "mocha": "5.2.0",
     "pre-git": "3.4.0",
-    "semantic-release": "^4.3.5",
-    "standard": "6.0.7"
+    "semantic-release": "15.9.12",
+    "standard": "6.0.7",
+    "travis-deploy-once": "5.0.4"
   },
   "config": {
     "pre-git": {
