@@ -42,7 +42,7 @@
   "homepage": "https://github.com/bahmutov/crasher",
   "devDependencies": {
     "check-more-types": "2.24.0",
-    "express": "4.13.4",
+    "express": "4.16.3",
     "git-issues": "1.2.0",
     "i": "0.3.4",
     "koa": "1.1.2",
