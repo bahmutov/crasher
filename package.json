@@ -51,7 +51,7 @@
     "lazy-ass": "1.6.0",
     "mocha": "5.2.0",
     "pre-git": "3.4.0",
-    "semantic-release": "^4.3.5",
+    "semantic-release": "4.3.5",
     "standard": "6.0.7"
   },
   "config": {
