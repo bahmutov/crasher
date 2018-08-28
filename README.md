@@ -6,6 +6,7 @@
 
 [![Build status][crasher-ci-image] ][crasher-ci-url]
 [![semantic-release][semantic-image] ][semantic-url]
+[![renovate-app badge][renovate-badge]][renovate-app]
 
 Read [How to crash](https://glebbahmutov.com/blog/how-to-crash/) blog post
 
@@ -17,8 +18,8 @@ Use as middleware in Express
 
 ```js
 // setup crash reporting, for example Sentry
-var app = express();
-app.get('/api/crash', require('crasher'));
+var app = express()
+app.get('/api/crash', require('crasher'))
 ```
 
 Test that both sync and async thrown errors are captured by the crash reporting setup
@@ -62,10 +63,10 @@ handle them
 
 ### Demos
 
-* [Express without error handling](demo/server.js)
-* [Express with error handling](demo/server-with-error-handling.js)
-* [Koa without error handling](demo/server-koa.js)
-* [Koa with error handling](demo/server-koa-with-error-handling.js)
+- [Express without error handling](demo/server.js)
+- [Express with error handling](demo/server-with-error-handling.js)
+- [Koa without error handling](demo/server-koa.js)
+- [Koa with error handling](demo/server-koa-with-error-handling.js)
 
 ## Why
 
@@ -75,17 +76,17 @@ and asynchronous.
 
 ## Related projects
 
-* [crash-reporter-middleware](https://github.com/bahmutov/crash-reporter-middleware)
+- [crash-reporter-middleware](https://github.com/bahmutov/crash-reporter-middleware)
   sends crashes to the crash reporting service
-* [raven-express](https://github.com/bahmutov/raven-express) is a Sentry client for Node Express server
+- [raven-express](https://github.com/bahmutov/raven-express) is a Sentry client for Node Express server
 
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2016
 
-* [@bahmutov](https://twitter.com/bahmutov)
-* [glebbahmutov.com](https://glebbahmutov.com)
-* [blog](https://glebbahmutov.com/blog/)
+- [@bahmutov](https://twitter.com/bahmutov)
+- [glebbahmutov.com](https://glebbahmutov.com)
+- [blog](https://glebbahmutov.com/blog/)
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
@@ -125,3 +126,5 @@ OTHER DEALINGS IN THE SOFTWARE.
 [crasher-ci-url]: https://travis-ci.org/bahmutov/crasher
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
+[renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
+[renovate-app]: https://renovateapp.com/
