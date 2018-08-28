@@ -1,4 +1,5 @@
 function crash () {
+  console.log('before async crash')
   throw new Error('This is a test async error (crasher)')
 }
 

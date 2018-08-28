@@ -3,6 +3,7 @@ function failPromise () {
     throw new Error('Missing ES6 Promise')
   }
 
+  console.log('before rejected promise')
   return Promise.reject(new Error('This is a rejected promise test (crasher)'))
 }
 
