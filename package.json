@@ -5,7 +5,7 @@
   "version": "0.0.0-semantic-release",
   "scripts": {
     "pretest": "npm run lint",
-    "test": "echo Write tests!",
+    "test": "mocha src/*-spec.js",
     "lint": "standard --verbose src demo/*.js",
     "commit": "commit-wizard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
@@ -46,6 +46,7 @@
     "i": "0.3.4",
     "koa": "1.1.2",
     "koa-route": "2.4.2",
+    "mocha": "5.2.0",
     "pre-git": "3.4.0",
     "semantic-release": "^4.3.5",
     "standard": "6.0.7"
